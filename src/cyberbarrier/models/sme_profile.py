@@ -75,27 +75,5 @@ class SMEProfile:
     
     def to_dict(self) -> dict:
         """Convert SMEProfile to dictionary"""
-        return {
-            'company_name': self.company_name,
-            'industry': self.industry,
-            'total_employees': self.total_employees,
-            'annual_revenue': self.annual_revenue,
-            'has_security_policy': self.has_security_policy,
-            'security_training_frequency': self.security_training_frequency,
-            'incident_response_plan': self.incident_response_plan,
-            'threat_monitoring': self.threat_monitoring,
-            'security_staff_count': self.security_staff_count,
-            'security_budget_ratio': self.security_budget_ratio,
-            'current_security_tools': self.current_security_tools,
-            'compliance_level': self.compliance_level,
-            'cloud_adoption_level': self.cloud_adoption_level,
-            'network_infrastructure_score': self.network_infrastructure_score,
-            'endpoint_management_score': self.endpoint_management_score,
-            'data_backup_score': self.data_backup_score,
-            'executive_security_awareness': self.executive_security_awareness,
-            'security_budget_priority': self.security_budget_priority,
-            'board_involvement': self.board_involvement,
-            'strategic_security_planning': self.strategic_security_planning,
-            'previous_incidents': self.previous_incidents,
-            'notes': self.notes
-        }
+        from dataclasses import asdict
+        return asdict(self)
